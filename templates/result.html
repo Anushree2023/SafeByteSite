@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Scan Results</h1>
+    <img src="{{ image_path }}" alt="Uploaded Image" width="300"><br><br>
+    <table border="1">
+        <tr>
+            <th>Ingredient</th>
+            <th>Category</th>
+        </tr>
+        {% for ing, cat in results %}
+        <tr>
+            <td>{{ ing }}</td>
+            <td>{{ cat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Scan Another Image</a>
+</body>
+</html>
