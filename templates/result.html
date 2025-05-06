@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Scan Results</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
 </head>
 <body>
-    <h1>Scan Results</h1>
-    <img src="{{ image_path }}" alt="Uploaded Image" width="300"><br><br>
-    <table border="1">
-        <tr>
-            <th>Ingredient</th>
-            <th>Category</th>
-        </tr>
-        {% for ing, cat in results %}
-        <tr>
-            <td>{{ ing }}</td>
-            <td>{{ cat }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    <h1>Ingredient Safety Analysis</h1>
+    <img src="{{ image_url }}" alt="Uploaded Image" width="300">
+    <p>{{ result }}</p>
     <br>
-    <a href="/">Scan Another Image</a>
+    <a href="/">Go back</a>
 </body>
 </html>
